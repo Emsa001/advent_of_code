@@ -56,9 +56,8 @@ function secondPart(){
             for(let j = i - 1; j >= 0; j--){
                 for (const rule of numRules) {
                     if (nums[j] == rule.value){
-                        wasWrong = true;
                         swap(nums, i, j);
-                        return checkOrder(nums, wasWrong);
+                        return checkOrder(nums, true);
                     }
                 }
             }
